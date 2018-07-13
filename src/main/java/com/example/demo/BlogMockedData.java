@@ -35,4 +35,16 @@ public class BlogMockedData {
         }
         return null;
     }
+
+    //search blog by text
+    public List<Blog> searchBlogs(String searchTerm) {
+        List<Blog> searchedBlogs = new ArrayList<Blog>();
+        for (Blog b: blogs) {
+            if (b.getTitle().toLowerCase().contains(searchTerm.toLowerCase()) ||
+                    b.getContent().toLowerCase().contains(searchTerm.toLowerCase())){
+                searchedBlogs.add(b);
+            }
+        }
+        return searchedBlogs;
+    }
 }
