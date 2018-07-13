@@ -55,5 +55,18 @@ public class BlogMockedData {
         return newBlog;
     }
 
+    //update blog
+    public Blog updateBlog(int id, String title, String content) {
+        for (Blog b: blogs) {
+            if (b.getId() == id) {
+                int blogIndex = blogs.indexOf(b);
+                b.setTitle(title);
+                b.setContent(content);
+                blogs.set(blogIndex, b);
+                return b;
+            }
+        }
+        return null;
+    }
 
 }
