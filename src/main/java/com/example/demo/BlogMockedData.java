@@ -22,4 +22,16 @@ public class BlogMockedData {
         blogs.add(new Blog( 3, "Title 3", "Content 3"));
         blogs.add(new Blog( 4, "Title 4", "Content 5"));
     }
+
+    //return all blogs
+    public List<Blog> fetchBlogs() {
+        return blogs;
+    }
+    public Blog getBlogById(int id) {
+        for (Blog b: blogs) {
+            if (b.getId() == id) {
+                return b;
+            }
+        }
+    }
 }
