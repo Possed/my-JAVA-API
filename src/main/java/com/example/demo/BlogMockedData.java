@@ -33,5 +33,6 @@ public class BlogMockedData {
                 return b;
             }
         }
+        return null;
     }
 }
