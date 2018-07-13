@@ -1,0 +1,7 @@
+/target
+.idea/
+/node_modules
+dependency-reduced-pom.xml
+*.iml
+package-lock.json
+src/main/resources/static/built/*
