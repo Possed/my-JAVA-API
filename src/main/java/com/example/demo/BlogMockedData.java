@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BlogMockedData {
@@ -12,5 +13,13 @@ public class BlogMockedData {
             instance = new BlogMockedData();
         }
         return instance;
+    }
+
+    public BlogMockedData(){
+        blogs = new ArrayList<Blog>();
+        blogs.add(new Blog(1, "Title 1", "Content 1"));
+        blogs.add(new Blog(2, "Title 2", "Content 2"));
+        blogs.add(new Blog( 3, "Title 3", "Content 3"));
+        blogs.add(new Blog( 4, "Title 4", "Content 5"));
     }
 }
