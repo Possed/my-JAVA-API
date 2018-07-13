@@ -21,7 +21,7 @@ public class Blog {
         this.id = id;
     }
 
-    public getTitle() {
+    public String getTitle() {
         return title;
     }
 
