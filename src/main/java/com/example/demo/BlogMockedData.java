@@ -69,4 +69,19 @@ public class BlogMockedData {
         return null;
     }
 
+    //delete blog by id
+    public boolean delete(int id){
+        int blogIndex = -1;
+        for (Blog b: blogs) {
+            if (b.getId() == id) {
+                blogIndex = blogs.indexOf(b);
+                continue;
+            }
+        }
+        if(blogIndex > -1) {
+            blogs.remove(blogIndex);
+        }
+        return true;
+    }
+
 }
