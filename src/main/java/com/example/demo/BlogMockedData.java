@@ -47,4 +47,13 @@ public class BlogMockedData {
         }
         return searchedBlogs;
     }
+
+    //create blog
+    public Blog createBlog(int id, String title, String content) {
+        Blog newBlog = new Blog(id, title, content);
+        blogs.add(newBlog);
+        return newBlog;
+    }
+
+
 }
