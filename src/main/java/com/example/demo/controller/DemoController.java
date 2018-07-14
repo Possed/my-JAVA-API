@@ -39,4 +39,12 @@ public class DemoController {
         String content = body.get("content");
         return blogMockedData.createBlog(id, title, content);
     }
+
+    @PutMapping("/blog/{id}")
+    public Blog update(@PathVariable String id, @RequestBody Map<String, String> body){
+        int blogId = Integer.parseInt(id);
+        String title = body.get("title");
+        String content = body.get("content");
+        return blogMockedData.updateBlog(blogId, title, content);
+    }
 }
