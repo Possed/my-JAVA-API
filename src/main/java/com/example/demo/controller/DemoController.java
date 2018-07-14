@@ -47,4 +47,10 @@ public class DemoController {
         String content = body.get("content");
         return blogMockedData.updateBlog(blogId, title, content);
     }
+
+    @DeleteMapping("blog/{id}")
+    public boolean delete(@PathVariable String id){
+        int blogId = Integer.parseInt(id);
+        return blogMockedData.delete(blogId);
+    }
 }
