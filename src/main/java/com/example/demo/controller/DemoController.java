@@ -31,4 +31,12 @@ public class DemoController {
         String searchTerm = body.get("text");
         return blogMockedData.searchBlogs(searchTerm);
     }
+
+    @PostMapping("/blog")
+    public Blog create(@RequestBody Map<String, String> body){
+        int id = Integer.parseInt(body.get("id"));
+        String title = body.get("title");
+        String content = body.get("content");
+        return blogMockedData.createBlog(id, title, content);
+    }
 }
