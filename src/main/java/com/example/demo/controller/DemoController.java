@@ -1,16 +1,22 @@
 package com.example.demo.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.example.demo.Blog;
+import com.example.demo.BlogMockedData;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import java.util.List;
+
 
 @RestController
 public class DemoController {
 
-    @RequestMapping("/")
-    public String index() {
-        return "GZ";
+
+    BlogMockedData blogMockedData = BlogMockedData.getInstance();
+
+    @GetMapping("/blog")
+    public List<Blog> index(){
+        return blogMockedData.fetchBlogs();
     }
 }
