@@ -20,7 +20,7 @@ public class BlogMockedData {
         blogs.add(new Blog(1, "Title 1", "Content 1"));
         blogs.add(new Blog(2, "Title 2", "Content 2"));
         blogs.add(new Blog( 3, "Title 3", "Content 3"));
-        blogs.add(new Blog( 4, "Title 4", "Content 5"));
+        blogs.add(new Blog( 4, "Title 4", "Content 4"));
     }
 
     //return all blogs
